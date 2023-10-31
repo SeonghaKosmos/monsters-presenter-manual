@@ -247,9 +247,9 @@ export const monsters = [
 export default function Home() {
   return (
     <main className={styles.main}>
-      {monsters.map((monster, key) =>{
+      {monsters.map((monster) =>{
         return (
-          <div className={styles.monster}>
+          <div key={monster.name} className={styles.monster}>
               <img src={monster.imgSrc}/>
               <div className={styles.info}>Name: {monster.name}</div>
               <div className={styles.info}>Country: {monster.country}</div>
